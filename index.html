@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomi Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Anatomi Quiz</h1>
+        <div id="start-screen">
+            <h2>Valkommen till Anatomi Quiz!</h2>
+            <p>Testa dina kunskaper om kroppens muskler.</p>
+            <input type="text" id="player-name" placeholder="Skriv ditt namn">
+            <button onclick="startQuiz()">Starta quiz</button>
+        </div>
+        <div id="quiz-screen" style="display: none;">
+            <div class="question-info">
+                <p id="question-number"></p>
+                <p id="score">Poang: 0</p>
+            </div>
+            <h2 id="question"></h2>
+            <div class="image-container">
+                <img id="question-image" src="" alt="Bild till fragan">
+                <div id="image-fallback">💪</div>
+            </div>
+            <div id="options"></div>
+            <button id="next-button" onclick="nextQuestion()" disabled>Na sta fraga</button>
+        </div>
+        <div id="result-screen" style="display: none;">
+            <h2>Quizet ar klart!</h2>
+            <p id="final-score"></p>
+            <div id="answer-summary"></div>
+            <button onclick="restartQuiz()">Spela igen</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

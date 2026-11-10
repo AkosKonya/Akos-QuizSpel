@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #101b35, #263e65);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+h1 {
+    color: #1d3557;
+}
+h2 {
+    color: #263e65;
+}
+input {
+    padding: 12px;
+    width: 70%;
+    margin: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+button {
+    background-color: #263e65;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 8px;
+}
+button:hover {
+    background-color: #3d5a80;
+}
+button:active {
+    transform: scale(0.97);
+}
+button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+.question-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #263e65;
+}
+.image-container {
+    width: 100%;
+    height: 300px;
+    background-color: #eef1f5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+}
+#image-fallback {
+    font-size: 80px;
+}
+#options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.option-button {
+    background-color: #e8edf5;
+    color: #222;
+    border: 2px solid #ccd3df;
+}
+.option-button:hover {
+    background-color: #d5dfed;
+}
+.correct {
+    background-color: #4caf50 !important;
+    color: white !important;
+}
+.incorrect {
+    background-color: #e53935 !important;
+    color: white !important;
+}
+#answer-summary {
+    text-align: left;
+    margin-top: 20px;
+}
+@media (max-width: 600px) {
+    #options {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        padding: 15px;
+    }
+}
